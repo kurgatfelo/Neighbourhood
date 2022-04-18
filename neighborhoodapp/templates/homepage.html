@@ -1,0 +1,52 @@
+{%extends 'base.html'%}
+{%load bootstrap4}
+{%block content%}
+<style>
+.container-fluid h2{
+  
+    text-align: center;
+    color: blue;
+    padding-top: 30px;
+}
+
+.desc{
+  padding-left: 40px;
+  padding-top: 20px;
+ 
+}
+#description{
+  color: blue
+
+}
+</style>
+<div class="container-fluid"  style="background-color: #AFD2F5;height: auto;">
+  <h2> {{message}}</h2> 
+    <div class="row">
+        {%if projects%}
+       
+
+    {%for project in projects%}
+      <div class="col-sm-6" style="color: red; height: 450px; margin-bottom: 120px;margin-top:5px;text-align: left;">
+        <div class="back">
+        <h2 style="color: red; font-style: italic;">{{project.name}}</h2>
+       
+        <a  href="{% url 'more' project.id %}">  <img style="height: 300px;width: 450px;background-color: grey;margin-left: 30px;border-radius: 30px;" src="{{project.image.url}}" alt="image" ></a>
+        <div class="desc">
+        <h id="description">Description:</h>
+        <p style="color: black;">{{project.description}}</p>
+        <h id="description">Population:</h>
+        <p style="color: black;">{{project.count}}</p>
+        <h id="description">Location:</h>
+        <p style="color: black;">{{project.location}}</p>
+      </div>
+        </div>
+      </div>
+      {%endfor%}
+
+    {%else%}
+     you have no neighborhood
+    {%endif%}
+    </div>
+  </div>
+
+{%endblock%}
