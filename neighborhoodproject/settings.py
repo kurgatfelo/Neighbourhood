@@ -102,6 +102,7 @@ WSGI_APPLICATION = 'neighborhoodproject.wsgi.application'
 #         'NAME': 'neighborhood',    
 #         'USER': 'moringa',
 #         'PASSWORD': 'Felixkurgat5',
+#     }}
 
 # development
 if config('MODE')=="dev":
