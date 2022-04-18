@@ -1,0 +1,48 @@
+{% load bootstrap4 %}
+{% load static%}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script src="{% static 'fontawesomefree/js/all.min.js' %}"></script>
+    
+        <!-- reference your installed Font Awesome Free package's files here -->
+    <link href="{% static 'fontawesomefree/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/fontawesome.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/brands.css' %}" rel="stylesheet" type="text/css">
+    <link href="{% static 'fontawesomefree/css/solid.css' %}" rel="stylesheet" type="text/css">
+    <script src="{% static 'fontawesomepro/js/all.min.js' %}"></script>
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+    
+    <meta charset="utf-8">
+
+    {% if title %}
+    <title>NEIGHBORHOOD{{name}}</title>
+    {% else %}
+    <title> Neighborhood</title>
+    {% endif %}
+
+    {% block styles %}
+    {% bootstrap_css %}
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+    {% endblock %}
+
+</head>
+
+<body>
+
+    {% include "navbar.html" %}
+
+    {% block content %}
+    <h1 class='text-center'>Neighborhood</h1>
+    {%endblock%}
+
+    {% block scripts %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    {% bootstrap_javascript %}
+    {% endblock %}
+
+</body>
+
+</html>
