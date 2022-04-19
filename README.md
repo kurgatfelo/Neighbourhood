@@ -2,7 +2,7 @@
 
 ## Author
 
-[**FELIX KIBET KURGAT**](https://github.com/Vitalis-Kirui)
+[**FELIX KIBET KURGAT**](https://github.com/kurgatfelo)
 
 ## Description
 ![Website image](https://github.com/kurgatfelo/Neighbourhood/blob/master/neighborhoodapp/media/Screenshot%20from%202022-04-18%2015-55-07.png)
